@@ -1,0 +1,65 @@
+{
+  "build": {
+    "beforeBuildCommand": "bun run build",
+    "beforeDevCommand": "bun run dev",
+    "devPath": "http://localhost:5173/",
+    "distDir": "frontend/dist/"
+  },
+  "package": {
+    "productName": "WeatherApp",
+    "version": "1.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false
+    },
+    "bundle": {
+      "active": true,
+      "category": "Weather",
+      "copyright": "",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "gd.rf.ufifty50.rustyweather",
+      "longDescription": "A weather app built with Rust and React",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "A weather app built with Rust and React",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "title": "Weather App",
+        "width": 800,
+        "height": 600,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ]
+  }
+}

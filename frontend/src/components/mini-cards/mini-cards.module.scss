@@ -1,0 +1,40 @@
+// globals
+@import '../../globals/colors.module.scss';
+
+// Styles
+.wrapper {
+  display: grid;
+  gap: 1.75rem;
+  padding: 2rem;
+  max-width: 600px;
+}
+
+.card {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  border-radius: 22px;
+  background-color: $snow-white;
+  min-width: 420px;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  text-align: justify;
+  color: $coffee-brown;
+  margin: 0;
+
+  &.sub {
+    font-family: sans-serif;
+    color: $deep-blue-50;
+  }
+}
+
+.btn {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.logo {
+  height: 7rem;
+}

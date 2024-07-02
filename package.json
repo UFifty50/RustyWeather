@@ -1,0 +1,11 @@
+{
+  "name": "weather-app-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "cd frontend && bun run dev",
+    "build": "cd frontend && bun run build",
+    "preview": "cd frontend && bun run preview"
+  }
+}
