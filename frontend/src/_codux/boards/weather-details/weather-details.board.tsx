@@ -3,6 +3,19 @@ import { WeatherDetails } from '../../../components/weather-details/weather-deta
 
 export default createBoard({
     name: 'WeatherDetails',
-    Board: () => <WeatherDetails cloudCover="sun" feelsLikeTemp={13} highTemp={17} lowTemp={9} temperature={12} />,
+    Board: () => (
+        <WeatherDetails
+            cloudCover="rainSun"
+            feelsLikeTemp={20}
+            highTemp={22}
+            lowTemp={12}
+            temperature={19}
+            updateTime="7:33 PM"
+        />
+    ),
     isSnippet: true,
+    environmentProps: {
+        canvasWidth: 408,
+        canvasHeight: 238,
+    },
 });

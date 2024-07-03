@@ -1,6 +1,102 @@
 .root {
-  max-width: 350px;
-  min-height: 100%;
-  padding: 2rem;
-  gap: 1rem;
+  padding: 1rem;
+  border: 10px solid #1498dc;
+  border-radius: 20%;
+  background-color: rgba(255, 255, 255, 0);
+  font-weight: 500;
+  row-gap: 0px;
+  column-gap: 0px;
+  position: static;
+  width: max-content;
+  height: max-content;
+}
+.temp {
+  opacity: 1;
+  text-align: start;
+  direction: ltr;
+  text-transform: none;
+  position: static;
+  display: flex;
+  text-decoration-line: none;
+  overflow: visible;
+  font-family:
+    Arial Black,
+    sans-serif;
+  align-items: center;
+  font-weight: 400;
+}
+.tempFormat {
+  text-align: start;
+  display: block;
+  align-content: center;
+}
+.detailGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  grid-auto-flow: row;
+  align-items: stretch;
+  justify-items: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: static;
+  margin: 0px;
+}
+.cloudCoverImage {
+  max-height: 90%;
+  max-width: 90%;
+  display: flex;
+  justify-content: end;
+}
+.feelsLike {
+  position: static;
+  display: flex;
+  justify-content: start;
+  align-content: start;
+}
+.textXL {
+  font-size: 70px;
+}
+.textL {
+  font-size: 60px;
+}
+.textML {
+  font-size: 50px;
+}
+.textM {
+  font-size: 40px;
+}
+.textMS {
+  font-size: 30px;
+}
+.textS {
+  font-size: 20px;
+}
+.textXS {
+  font-size: 10px;
+}
+.cloudCoverText {
+  text-align: start;
+  display: flex;
+  justify-content: end;
+}
+.highLowTemp {
+  display: block;
+  text-align: start;
+  align-content: center;
+  justify-content: start;
+}
+.colour-Lgrey {
+  color: #6e6e6e;
+}
+.updateTime {
+  display: flex;
+  justify-content: end;
+}
+.feelsLikeInner {
+  display: flex;
+  justify-content: start;
+  align-content: center;
+  align-items: center;
+  justify-items: start;
 }
