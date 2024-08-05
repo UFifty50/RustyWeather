@@ -5,9 +5,6 @@ import SunnySvg from '../../assets/sunny.svg';
 
 export type WeatherState =
     | 'sun'
-    | 'mostSun'
-    | 'slightSun'
-    | 'mostCloud'
     | 'slightCloud'
     | 'cloud'
     | 'rain'
@@ -41,17 +38,8 @@ export const WeatherDetails = ({
         case 'sun':
             cloudCondition = 'Sunny';
             break;
-        case 'mostSun':
-            cloudCondition = 'Mostly Sunny';
-            break;
-        case 'slightSun':
-            cloudCondition = 'Slight Sun';
-            break;
         case 'slightCloud':
             cloudCondition = 'Slight Cloud';
-            break;
-        case 'mostCloud':
-            cloudCondition = 'Mostly Cloudy';
             break;
         case 'cloud':
             cloudCondition = 'Cloudy';

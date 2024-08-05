@@ -6,6 +6,7 @@ export default createBoard({
     Board: () => <SubdetailBar windSpeed={2} windSpeedType={'mi/h'} humidity={93} pollution={16} />,
     isSnippet: true,
     environmentProps: {
-        windowWidth: 466,
+        windowWidth: 462,
+        windowHeight: 606,
     },
 });

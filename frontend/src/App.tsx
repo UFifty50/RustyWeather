@@ -6,9 +6,6 @@ import Classnames from 'classnames';
 
 let cloudCoverVar = [
     'sun',
-    'mostSun',
-    'slightSun',
-    'mostCloud',
     'slightCloud',
     'cloud',
     'rain',
