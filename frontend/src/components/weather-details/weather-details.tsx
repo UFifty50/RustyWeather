@@ -1,19 +1,22 @@
 import classNames from 'classnames';
 import styles from './weather-details.module.scss';
+import letterSizesStyles from '../../globals/letterSizes.module.scss';
 import SunnySvg from '../../assets/sunny.svg';
+
+export type WeatherState =
+    | 'sun'
+    | 'mostSun'
+    | 'slightSun'
+    | 'mostCloud'
+    | 'slightCloud'
+    | 'cloud'
+    | 'rain'
+    | 'heavyRain'
+    | 'rainSun';
 
 export interface WeatherDetailProps {
     className?: string;
-    cloudCover:
-        | 'sun'
-        | 'mostSun'
-        | 'slightSun'
-        | 'mostCloud'
-        | 'slightCloud'
-        | 'cloud'
-        | 'rain'
-        | 'heavyRain'
-        | 'rainSun';
+    cloudCover: WeatherState;
     temperature: number;
     feelsLikeTemp: number;
     highTemp: number;
@@ -69,28 +72,36 @@ export const WeatherDetails = ({
         <div className={styles.root}>
             <div className={styles.detailGrid}>
                 <div className={styles.temp}>
-                    <p className={classNames(styles.temp, styles.textL)}>{temperature}°</p>
-                    <p className={classNames(styles.tempFormat, styles.textM)}>{tempFormat}</p>
+                    <p className={classNames(styles.temp, letterSizesStyles.textL)}>
+                        {temperature}°
+                    </p>
+                    <p className={classNames(styles.tempFormat, letterSizesStyles.textM)}>
+                        {tempFormat}
+                    </p>
                 </div>
                 <div className={styles.cloudCoverImage}>
                     <img src={SunnySvg} />
                 </div>
                 <div className={styles.feelsLike}>
                     <div className={styles.feelsLikeInner}>
-                        <p className={styles.textS}>Feels like {feelsLikeTemp}°</p>
-                        <p className={classNames(styles.tempFormat, styles.textXS)}>{tempFormat}</p>
+                        <p className={letterSizesStyles.textS}>Feels like {feelsLikeTemp}°</p>
+                        <p className={classNames(styles.tempFormat, letterSizesStyles.textXS)}>
+                            {tempFormat}
+                        </p>
                     </div>
                 </div>
                 <div className={styles.cloudCoverText}>
-                    <p className={styles.textS}>{cloudCondition}</p>
+                    <p className={letterSizesStyles.textS}>{cloudCondition}</p>
                 </div>
                 <div className={classNames(styles.highLowTemp, styles['colour-Lgrey'])}>
-                    <p className={styles.textS}>
+                    <p className={letterSizesStyles.textS}>
                         high {highTemp} | low {lowTemp}
                     </p>
                 </div>
                 <div className={styles.updateTime}>
-                    <p className={classNames(styles['colour-Lgrey'], styles.textM)}>{updateTime}</p>
+                    <p className={classNames(styles['colour-Lgrey'], letterSizesStyles.textM)}>
+                        {updateTime}
+                    </p>
                 </div>
             </div>
         </div>

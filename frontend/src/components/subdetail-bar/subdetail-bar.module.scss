@@ -1,0 +1,61 @@
+.root {
+  padding: 1rem;
+  border: 10px solid #1498dc;
+  border-radius: 20%;
+  background-color: rgba(255, 255, 255, 0);
+  font-weight: 500;
+  row-gap: 0px;
+  column-gap: 0px;
+  position: static;
+  width: max-content;
+  height: max-content;
+}
+.detailGrid {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  grid-template-rows: max-content max-content;
+  grid-auto-flow: row;
+  align-items: stretch;
+  justify-items: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: static;
+  gap: 10%;
+  width: 20vw;
+  height: 20vh;
+}
+.img1 {
+  max-width: 50%;
+  max-height: 50%;
+}
+.div1 {
+  display: flex;
+  overflow: visible;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: static;
+}
+.div2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.div3 {
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+  align-self: center;
+  justify-self: stretch;
+}
+.p1 {
+  display: block;
+  align-self: end;
+}

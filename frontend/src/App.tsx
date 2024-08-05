@@ -1,15 +1,16 @@
 import styles from './App.module.scss';
-import { WeatherDetails } from './components/weather-details/weather-details';
+import { WeatherState, WeatherDetails } from './components/weather-details/weather-details';
 import { InputGroup } from '@blueprintjs/core';
 
 let cloudCoverVar = ['sun', 'mostSun', 'slightSun', 'mostCloud', 'slightCloud', 'cloud', 'rain', 'heavyRain', 'rainSun'];
 
 function App() {
+    let coverage: WeatherState = cloudCoverVar[~~(Math.random() * cloudCoverVar.length)];
     return (
         <div className={styles.App}>
             <InputGroup placeholder="What is the cloudCover? (sun, mostSun, slightSun, mostCloud, slightCloud, cloud, rain, heavyRain, rainSun)" />
             <WeatherDetails
-                cloudCover={cloudCoverVar[~~(Math.random() * cloudCoverVar.length)]}
+                cloudCover={coverage}
                 feelsLikeTemp={20}
                 highTemp={22}
                 lowTemp={12}
