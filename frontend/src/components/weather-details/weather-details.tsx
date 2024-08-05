@@ -80,7 +80,7 @@ export const WeatherDetails = ({
                     </p>
                 </div>
                 <div className={styles.cloudCoverImage}>
-                    <img src={SunnySvg} />
+                    <img src={SunnySvg} className={styles.img1} />
                 </div>
                 <div className={styles.feelsLike}>
                     <div className={styles.feelsLikeInner}>
