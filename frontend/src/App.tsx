@@ -3,15 +3,9 @@ import { WeatherState, WeatherDetails } from './components/weather-details/weath
 import { SubdetailBar } from './components/subdetail-bar/subdetail-bar';
 import { InputGroup } from '@blueprintjs/core';
 import Classnames from 'classnames';
+import { SunTime } from './components/sun-time/sun-time';
 
-let cloudCoverVar = [
-    'sun',
-    'slightCloud',
-    'cloud',
-    'rain',
-    'heavyRain',
-    'rainSun',
-];
+let cloudCoverVar = ['sun', 'slightCloud', 'cloud', 'rain', 'heavyRain', 'rainSun'];
 
 function App() {
     let coverage: WeatherState = cloudCoverVar[~~(Math.random() * cloudCoverVar.length)];
@@ -44,6 +38,9 @@ function App() {
                             pollution={16}
                             className={styles.subdetailBar}
                         />
+                    </div>
+                    <div className={styles.div8}>
+                        <SunTime riseTime={20000000} setTime={120013063} />
                     </div>
                 </div>
             </div>

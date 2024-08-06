@@ -1,6 +1,9 @@
 import styles from './sun-time.module.scss';
 import classNames from 'classnames';
 import letterSizesStyles from '../../globals/letterSizes.module.scss';
+import SunRiseSVG from '../../assets/sunrise.svg';
+import SunSetSVG from '../../assets/sunset.svg';
+import ArcSVG from '../../assets/arc.svg';
 
 export interface SunTimeProps {
     className?: string;
@@ -19,18 +22,22 @@ export const SunTime = ({ className, riseTime, setTime, children = 'SunTime' }: 
     return (
         <div className={styles.root}>
             <div className={styles.detailGrid}>
-                <div>
-                    <img />
-                    <p>Sunrise</p>
-                    <p>{riseDateTime.getHours()}:{riseDateTime.getMinutes()}PM</p>
+                <div className={styles.div1}>
+                    <img src={SunRiseSVG} className={styles.img1} />
+                    <p className={letterSizesStyles.textS}>Sunrise</p>
+                    <p className={classNames(styles.p1, letterSizesStyles.textS)}>
+                        {riseDateTime.getHours()}:{riseDateTime.getMinutes()}AM
+                    </p>
                 </div>
-                <div>
-                    <img />
+                <div className={styles.div3}>
+                    <img src={ArcSVG} className={styles.img3} />
                 </div>
-                <div>
-                    <img />
-                    <p>Sunset</p>
-                    <p>{setDateTime.getHours()}:{setDateTime.getMinutes()}PM</p>
+                <div className={styles.div2}>
+                    <img src={SunSetSVG} className={styles.img2} />
+                    <p className={letterSizesStyles.textS}>Sunset</p>
+                    <p className={letterSizesStyles.textS}>
+                        {setDateTime.getHours()}:{setDateTime.getMinutes()}PM
+                    </p>
                 </div>
             </div>
         </div>
