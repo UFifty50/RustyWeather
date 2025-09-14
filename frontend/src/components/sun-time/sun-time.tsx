@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import letterSizesStyles from '../../globals/letterSizes.module.scss';
 import SunRiseSVG from '../../assets/sunrise.svg';
 import SunSetSVG from '../../assets/sunset.svg';
-import ArcSVG from '../../assets/arc.svg';
 
 export interface SunTimeProps {
     className?: string;
@@ -30,7 +29,8 @@ export const SunTime = ({ className, riseTime, setTime, children = 'SunTime' }: 
                     </p>
                 </div>
                 <div className={styles.div3}>
-                    <img src={ArcSVG} className={styles.img3} />
+                    <img />
+                    <p>Moon phase here</p>
                 </div>
                 <div className={styles.div2}>
                     <img src={SunSetSVG} className={styles.img2} />

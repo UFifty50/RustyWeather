@@ -24,6 +24,8 @@
     sans-serif;
   align-items: center;
   font-weight: 400;
+  width: max-content;
+  height: max-content;
 }
 .tempFormat {
   text-align: start;
@@ -47,10 +49,10 @@
   margin-right: 2vw;
 }
 .cloudCoverImage {
-  max-height: 100%;
-  max-width: 100%;
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 100%;
   align-items: center;
 }
 .feelsLike {
@@ -58,11 +60,13 @@
   display: flex;
   justify-content: start;
   align-content: start;
+  width: 100%;
+  height: 100%;
 }
 .cloudCoverText {
   text-align: start;
   display: flex;
-  justify-content: end;
+  flex-direction: column;
 }
 .highLowTemp {
   display: block;
@@ -72,10 +76,13 @@
 }
 .colour-Lgrey {
   color: #6e6e6e;
+  width: 100%;
+  height: 100%;
 }
 .updateTime {
-  display: flex;
-  justify-content: end;
+  display: block;
+  width: max-content;
+  height: max-content;
 }
 .feelsLikeInner {
   display: flex;
@@ -84,7 +91,47 @@
   align-items: center;
 }
 .img1 {
+  display: block;
   max-width: 95%;
   max-height: 95%;
+}
+.p1 {
   display: block;
+  align-self: end;
+}
+.div1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+.div2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+}
+.div3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+.div4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+}
+.div5 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+.div6 {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: start;
 }
